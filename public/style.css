@@ -1,0 +1,41 @@
+/* body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 100vh;
+    background-color: #f1f1f1;
+  }
+  input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  } */
+
+ * {
+    box-sizing: border-box;
+ }
+
+ p {
+    text-align: center;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 50px;
+ }
+#selectBtn{
+    text-align: center;
+    margin-bottom: 30px;
+}
+table {
+    margin-left:auto; 
+    margin-right:auto;
+    width: 600px;
+    height: 500px;
+}
+table, td, th {
+    border-collapse : collapse;
+    border : 1px solid black;
+    background-color: #f1f1f1;
+    
+};
+
