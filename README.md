@@ -2,11 +2,8 @@
     <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=240&text=withAnimal&animation=&fontColor=ffffff&fontSize=90" />
     </div>
     <div style="text-align: left;"> 
-    <h2 style="border-bottom: 1px solid #d8dee4; color: #282d33;"> 💻 프로젝트 및 팀원소개 </h2>
-<br>        
-        <li>
-            프로젝트 : withAnimal
-        </li>
+    <h2 style="border-bottom: 1px solid #d8dee4; color: #282d33;"> 💻 프로젝트 및 팀원소개 </h2>        
+        <h3>프로젝트 : withAnimal</h3>
 <br>
     <h2 style="border-bottom: 1px solid #d8dee3; color: #282d33;"> 💪 협업 방식 </h2>
 <br>
