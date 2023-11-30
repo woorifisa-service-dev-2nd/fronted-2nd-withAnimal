@@ -1,6 +1,7 @@
 {
   "name": "fronted-2nd-withanimal",
   "version": "1.0.0",
+  "type" : "module",
   "description": "강원도 내 반려동물 동반 가능 시설 api 활용 홈페이지",
   "main": "index.js",
   "scripts": {
@@ -12,6 +13,13 @@
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.54.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-prettier": "^5.0.1",
     "prettier": "^3.1.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
   }
 }
