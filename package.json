@@ -4,7 +4,8 @@
   "description": "강원도 내 반려동물 동반 가능 시설 api 활용 홈페이지",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write --cache ."
   },
   "keywords": [],
   "author": "",
