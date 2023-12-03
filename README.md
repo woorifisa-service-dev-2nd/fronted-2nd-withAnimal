@@ -50,7 +50,7 @@
   await listByPartCode(partCode);
     });
     
-    ```
+ ```
 <br>   
     2. 클라이언트(프론트) -> node서버로 partCode를 포함한 POST request를 보낸다. 
 
