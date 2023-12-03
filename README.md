@@ -4,7 +4,6 @@
 
 # 1️⃣ 주제 및 팀(팀원) 소개
 
-## 💻 프로젝트 및 팀원소개 
 Open API(공공데이터포털 : 강원도_반려동물동반관광정보) 활용 웹 서비스
 강원도 반려인 관광객 유도 및 관련 정보 제공을 위해 반려동물과 동반 가능한 여행지(숙박, 식당, 관광지 등)에 대한 데이터제공
 활용기술 : HTML, CSS, JS(Node.js 기반 서버 구축), ESLint, prettier
@@ -13,6 +12,7 @@ Open API(공공데이터포털 : 강원도_반려동물동반관광정보) 활�
 ## 팀원
 
 김경은, 용은희, 나경률, 안선영
+
 
 # 2️⃣ 협업 방식
 
@@ -33,30 +33,30 @@ Open API(공공데이터포털 : 강원도_반려동물동반관광정보) 활�
 
 1. 분야 코드 별 리스트 API 
 
-- 요청 URL : http://pettravel.kr/api/listPart.do?page=[현재 페이지 값]&pageBlock=[페이지 출력 개수]&partCode=[분야 코드]    
+- 요청 URL : http://pettravel.kr/api/listPart.do?page=[현재페이지값]&pageBlock=[페이지출력개수]&partCode=[분야코드]    
 - 결과값 : JSON 
 
 2. 분야 코드 별 상세 API
 
 - 파라미터 값으로 partCode와 첫번째 리스트 API의 결과값 중 contentSeq을 사용.
-- 요청 URL : http://www.pettravel.kr/api/detailSeqPart.do?partCode=[분야 코드]&contentNum=[콘텐츠 번호] 
+- 요청 URL : http://www.pettravel.kr/api/detailSeqPart.do?partCode=[분야코드]&contentNum=[콘텐츠번호] 
 - 결과값 : JSON 
 
 
 # 4️⃣ 핵심 기능 설명 및 구현 방법
 
 1. `eventListner` 를 통해 사용자로부터 `selectbox` 입력을 받아 `partCode` 를 가져온다.
-   ```javascript
+```javascript
   selectbox.addEventListener("change", async (event) => {
   const partCode = event.target.value;
   cnt = 1; // 분야코드가 달라질때마다 cnt값 초기화
   await listByPartCode(partCode);
    });
     
-   ```
+```
    
 2. 클라이언트(프론트) -> node서버로 partCode를 포함한 POST request를 보낸다. 
-   ```javascript
+```javascript
     const listByPartCode = async (partCode) => {
     const option = makeOptions("POST", JSON.stringify({ partCode }));
     const URL = "/list";
@@ -71,10 +71,10 @@ Open API(공공데이터포털 : 강원도_반려동물동반관광정보) 활�
       }
     });
     };
-   ```
+```
    
 3. node서버에서 partCode를 받아서 외부api서버로 request를 보낸다.
-   ```javascript
+```javascript
    app.post("/list", (req, res) => {
   
   const pageBlock = 5;
@@ -89,7 +89,7 @@ Open API(공공데이터포털 : 강원도_반려동물동반관광정보) 활�
     res.send(response.body);
   });
 });
-   ```
+```
 
 4. 외부 api에서 받은 응답을 클라이언트에게 보낸다.
 
