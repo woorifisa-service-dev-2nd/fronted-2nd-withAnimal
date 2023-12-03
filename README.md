@@ -3,8 +3,8 @@
     </div>
     <div style="text-align: left;"> 
     <h2 style="border-bottom: 1px solid #d8dee4; color: #282d33;"> 💻 프로젝트 및 팀원소개 </h2>        
-        <h3> Open API(공공데이터포털 : 강원도_반려동물동반관광정보) 활용 웹 서비스</h3> <br>
-        강원도 반려인 관광객 유도 및 관련 정보 제공을 위해 반려동물과 동반 가능한 여행지(숙박, 식당, 관광지 등)에 대한 데이터제공
+        <h3> Open API(공공데이터포털 : 강원도_반려동물동반관광정보) 활용 웹 서비스</h3>
+강원도 반려인 관광객 유도 및 관련 정보 제공을 위해 반려동물과 동반 가능한 여행지(숙박, 식당, 관광지 등)에 대한 데이터제공  <br>
 팀원 : 김경은, 용은희, 나경률, 안선영
 <br>
     <h2 style="border-bottom: 1px solid #d8dee3; color: #282d33;"> 💪 협업 방식 </h2>
@@ -23,11 +23,11 @@
     - 요청 URL : http://pettravel.kr/api/listPart.do?page=[현재 페이지 값]&pageBlock=[페이지 출력 개수]&partCode=[분야 코드] 
     - 결과값 : JSON 
 
-    
-    
 <br>
     
-    2. 분야 코드 별 상세 API <br>
+    2. 분야 코드 별 상세 API 
+    <br>
+    
     - 파라미터 값으로 partCode와 첫번째 리스트 API의 결과값 중 contentSeq을 사용. <br>
     - 요청 URL : http://www.pettravel.kr/api/detailSeqPart.do?partCode=[분야 코드]&contentNum=[콘텐츠 번호]
     - 결과값 : JSON 
