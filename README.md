@@ -4,14 +4,19 @@
 
 # 1️⃣ 주제 및 팀(팀원) 소개
 
+## 주제
 Open API(공공데이터포털 : 강원도_반려동물동반관광정보) 활용 웹 서비스 <br>
-강원도 반려인 관광객 유도 및 관련 정보 제공을 위해 반려동물과 동반 가능한 여행지(숙박, 식당, 관광지 등)에 대한 데이터제공 <br>
-활용기술 : HTML, CSS, JS(Node.js 기반 서버 구축), ESLint(airbnb-base), prettier
+**강원도 반려인 관광객 유도 및 관련 정보 제공을 위해 반려동물과 동반 가능한 여행지(숙박, 식당, 관광지 등)에 대한 데이터제공** <br>
+
+## 활용기술
+`HTML`, `CSS`, `JS(Node.js 기반 서버 구축)`, `ESLint(airbnb-base)`, `prettier`
 <br><br>
 
 ## 팀원
+| [김경은](https://github.com/GyeongEun-Kim)      | [용은희](https://github.com/ehyongyong)      | [나경률](https://github.com/NaKyongRyul)      | [안선영](https://github.com/anseonyeong)      |
+| ------------------------------------------------- | ---------------------------------------------- | --------------------------------------------- | ------------------------------------------ |
+| ![김경은](https://github.com/GyeongEun-Kim.png) | ![용은희](https://github.com/ehyongyong.png) | ![나경률](https://github.com/NaKyongRyul.png) | ![안선영](https://github.com/anseonyeong.png) |
 
-김경은, 용은희, 나경률, 안선영
 
 
 # 2️⃣ 협업 방식
@@ -29,15 +34,15 @@ Open API(공공데이터포털 : 강원도_반려동물동반관광정보) 활�
 <br><br>
 
 # 3️⃣ 활용 API
-공공데이터포털사이트 : 강원도_반려동물동반관광정보 Open API
+공공데이터포털사이트 : **강원도_반려동물동반관광정보 Open API**
 
-1. 분야 코드 별 리스트 API 
+## 1. 분야 코드 별 리스트 API 
 
 - 요청 URL : http://pettravel.kr/api/listPart.do?page=[현재페이지값]&pageBlock=[페이지출력개수]&partCode=[분야코드]    
-- 분야코드값 예시 : PC01(식음료), PC02(숙박), PC03(관광지), PC04(체험), PC05(동물병원)
+- 분야코드값 예시 : `PC01(식음료)`, `PC02(숙박)`, `PC03(관광지)`, `PC04(체험)`, `PC05(동물병원)`
 - 결과값 : JSON 
 
-2. 분야 코드 별 상세 API
+## 2. 분야 코드 별 상세 API
 
 - 파라미터 값으로 partCode와 첫번째 리스트 API의 결과값 중 contentSeq을 사용.
 - 요청 URL : http://www.pettravel.kr/api/detailSeqPart.do?partCode=[분야코드]&contentNum=[콘텐츠번호] 
@@ -102,12 +107,19 @@ Open API(공공데이터포털 : 강원도_반려동물동반관광정보) 활�
 
 # 4️⃣ 트러블 슈팅
 ## 💣 node_modules 
-초기 폴더 구성 후 git에 node_modules 포함하여 push한 후 각자 환경에서 세팅하는데 노드가 실행되지 않는 문제발생<br>
--> .gitignore 파일 생성하여 node_modules 제외시킴 <br>
--> 기존에 올라간 파일 삭제( git rm —cached -r node_modules )
+초기 폴더 구성 후 git에 `node_modules` 포함하여 push한 후 각자 환경에서 세팅하는데 노드가 실행되지 않는 문제발생<br>
+-> `.gitignore` 파일 생성하여 `node_modules` 제외시킴 <br>
+-> 기존에 올라간 파일 삭제( `git rm —cached -r node_modules` )
 
 ## 💣 페이지 랜덤값 설정
 페이지 랜덤값이 0 일 경우 데이터를 받아오지 못할 것을 예측 -> 1부터 시작으로 변경.
+
+##  💣 selectBox 선택하기 전 결과 표 숨기기
+`visibility : hidden` 으로 해결
+`display : none` 은 `block` 을 차지하지 않지만 `visibility : hidden` 은 `block` 을 차지한다는 차이가 있었음
+
+-> css상으로 block을 차지하고 있기를 원했기 때문에 visibility를 사용
+
 
 
         
