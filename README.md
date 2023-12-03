@@ -23,10 +23,10 @@
     - 요청 URL : http://pettravel.kr/api/listPart.do?page=[현재 페이지 값]&pageBlock=[페이지 출력 개수]&partCode=[분야 코드] 
     - 결과값 : JSON 
 
-<br>
+
     
-    2. 분야 코드 별 상세 API 
-    <br>
+2. 분야 코드 별 상세 API  <br>
+   
     
     - 파라미터 값으로 partCode와 첫번째 리스트 API의 결과값 중 contentSeq을 사용. <br>
     - 요청 URL : http://www.pettravel.kr/api/detailSeqPart.do?partCode=[분야 코드]&contentNum=[콘텐츠 번호]
