@@ -18,7 +18,7 @@ const getPage = (partCode, pageBlock) => {
   } else if (partCode === "PC05") {
     pageCnt = 72 / pageBlock; // 5개씩 출력한다면 존재하는 페이지 갯수
   }
-  return parseInt(Math.random() * pageCnt);
+  return parseInt(Math.random() * pageCnt) + 1;
 };
 
 app.get("/", function (req, res) {
@@ -46,7 +46,7 @@ app.post("/detail", (req, res) => {
   const { contentNum } = req.body;
   const URL = `http://www.pettravel.kr/api/detailSeqPart.do?partCode=${partCode}&contentNum=${contentNum}`;
   const request = require("request");
-
+  console.log(`contentNum: ${contentNum}`);
   request.get(URL, (error, response) => {
     res.send(response.body);
   });

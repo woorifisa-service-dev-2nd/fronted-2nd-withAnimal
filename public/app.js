@@ -1,4 +1,5 @@
 const selectbox = document.getElementById("search");
+const table = document.getElementById("table");
 let cnt = 1; // table의 한 행을 가져오기 위한 변수
 
 /**
@@ -47,6 +48,8 @@ const detailByPartCodeAndContentNum = async (partCode, contentNum) => {
       tr.getElementsByClassName("contentCell")[0].textContent = content;
       tr.getElementsByClassName("petFacilityCell")[0].textContent = petFacility;
       tr.getElementsByClassName("petWeightCell")[0].textContent = petWeight;
+
+      table.style.visibility = "visible";
     });
 };
 
