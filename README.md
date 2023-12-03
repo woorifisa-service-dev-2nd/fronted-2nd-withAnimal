@@ -51,9 +51,9 @@
     });
     
     ```
-<br>   
+  
     2. 클라이언트(프론트) -> node서버로 partCode를 포함한 POST request를 보낸다. 
-<br>
+
 ```javascript
     const listByPartCode = async (partCode) => {
   const option = makeOptions("POST", JSON.stringify({ partCode }));
@@ -71,7 +71,7 @@
 };
 
 ```
-<br>
+
     3. node서버에서 partCode를 받아서 외부api서버로 request를 보낸다.
 ```javascript
     app.post("/list", (req, res) => {
@@ -89,11 +89,11 @@
   });
 });
 ```
-<br>
+
    4. 외부 api에서 받은 응답을 클라이언트에게 보낸다.
-<br>
+
    5. 같은 방식으로 상세API 조회.
-<br>
+
    6. 마지막으로 응답데이터를 html table에 값 세팅한다.
 
     
@@ -103,7 +103,6 @@
     <li>김경은 : 웹 요청과 응답의 전체적인 흐름을 알 수 있었던 프로젝트였습니다. 그러나 요청과 응답의 흐름을 이해했음에도 직접 구현해보니 생각보다 시간이 걸렸습니다. 기존에 작성되어있는 api문서를 보고 parameter와 response를 이해하고 사용해보는 경험을 할수있어서 좋았습니다.</li>
     <li>나경률 : Open API를 활용하여 요청과 응답을 통한 웹의 구조를 알 수 있는 프로젝트였습니다. API를 호출하고 나온 값을 바탕으로 또 API를 호출하는 과정에서 어떻게 데이터를 불러오는지 어려움이 있었습니다. 팀원들과 소통하며 해당 부분을 해결하면서 기본적인 비동기 요청에 대해 이해할 수 있는 좋은 경험이었습니다.</li>
     <li>용은희 : API를 사용해봄으로써 웹 요청/응답 과정 전반적인 흐름을 알 수 있었습니다. 머리로 이해해도 구현은 또 다른 문제라는 것을 알았고 많은 연습이 필요할 것 같습니다. 어려운 부분을 팀원들과 소통하여 이해하고 해결하는 부분에서 많은 것을 배울 수 있었습니다.</li>
-    
 <br>    
     <div style="text-align: left;">
     <h2 style="border-bottom: 1px solid #d8dee4; color: #282d33;"> 🛠️ Tech Stacks </h2> <br> 
