@@ -18,14 +18,14 @@
 }
 
 #table {
-    /* display: flex; */
-    /* justify-content: center; */
+    visibility: hidden;
     margin: auto;
     margin-bottom: 100px;
     border: black;
     border: solid;
     text-align: center;
     border-collapse: collapse;
+    
 }
 
 th, td {
