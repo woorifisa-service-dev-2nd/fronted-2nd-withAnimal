@@ -22,19 +22,13 @@
     1. 분야 코드 별 리스트 API <br>
     
     - 요청 URL : http://pettravel.kr/api/listPart.do?page=[현재 페이지 값]&pageBlock=[페이지 출력 개수]&partCode=[분야 코드] 
-    
-<br>
-
     - 결과값 : JSON 
     
-<br>
+
     
     2. 분야 코드 별 상세 API <br>
     - 파라미터 값으로 partCode와 첫번째 리스트 API의 결과값 중 contentSeq을 사용. <br>
     - 요청 URL : http://www.pettravel.kr/api/detailSeqPart.do?partCode=[분야 코드]&contentNum=[콘텐츠 번호] 
-    
-<br>
-    
     - 결과값 : JSON 
     
  <br>
@@ -51,7 +45,7 @@
     });
     
     ```
-  
+<br>  
     2. 클라이언트(프론트) -> node서버로 partCode를 포함한 POST request를 보낸다. 
 
 ```javascript
@@ -71,7 +65,7 @@
 };
 
 ```
-
+<br>
     3. node서버에서 partCode를 받아서 외부api서버로 request를 보낸다.
 ```javascript
     app.post("/list", (req, res) => {
