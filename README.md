@@ -6,7 +6,7 @@
 
 Open API(공공데이터포털 : 강원도_반려동물동반관광정보) 활용 웹 서비스 <br>
 강원도 반려인 관광객 유도 및 관련 정보 제공을 위해 반려동물과 동반 가능한 여행지(숙박, 식당, 관광지 등)에 대한 데이터제공 <br>
-활용기술 : HTML, CSS, JS(Node.js 기반 서버 구축), ESLint, prettier
+활용기술 : HTML, CSS, JS(Node.js 기반 서버 구축), ESLint(airbnb-base), prettier
 <br><br>
 
 ## 팀원
@@ -101,9 +101,15 @@ Open API(공공데이터포털 : 강원도_반려동물동반관광정보) 활�
 <br><br>
 
 # 4️⃣ 트러블 슈팅
-## 💣 페이지 랜덤값 설정
+## 💣 node_modules 
+초기 폴더 구성 후 git에 node_modules 포함하여 push한 후 각자 환경에서 세팅하는데 노드가 실행되지 않는 문제발생<br>
+-> .gitignore 파일 생성하여 node_modules 제외시킴 <br>
+-> 기존에 올라간 파일 삭제( git rm —cached -r node_modules )
 
+## 💣 페이지 랜덤값 설정
 페이지 랜덤값이 0 일 경우 데이터를 받아오지 못할 것을 예측 -> 1부터 시작으로 변경.
+
+
         
 <br><br>
 
