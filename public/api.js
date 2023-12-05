@@ -6,7 +6,7 @@ const table = document.getElementById("table");
  * @param {number} contentNum 콘텐츠번호
  * 시설별 상세 정보를 조회하는 메서드
  */
-const detailByPartCodeAndContentNum = async (
+export const detailByPartCodeAndContentNum = async (
   URL,
   partCode,
   contentNum,
