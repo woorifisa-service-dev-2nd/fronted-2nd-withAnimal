@@ -7,5 +7,5 @@ const selectbox = document.getElementById("search");
  */
 selectbox.addEventListener("change", async (event) => {
   const partCode = event.target.value;
-  await listByPartCode(partCode);
+  await listByPartCode("/list", partCode);
 });

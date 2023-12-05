@@ -5,7 +5,7 @@
   "description": "강원도 내 반려동물 동반 가능 시설 api 활용 홈페이지",
   "main": "index.js",
   "scripts": {
-    "test": "vitest",
+    "test": "vitest --environment happy-dom",
     "format": "prettier --write --cache ."
   },
   "keywords": [],
@@ -17,6 +17,7 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-prettier": "^5.0.1",
+    "happy-dom": "^12.10.3",
     "prettier": "^3.1.0",
     "vitest": "^1.0.1"
   },

@@ -6,11 +6,15 @@ const table = document.getElementById("table");
  * @param {number} contentNum 콘텐츠번호
  * 시설별 상세 정보를 조회하는 메서드
  */
-const detailByPartCodeAndContentNum = async (partCode, contentNum, cnt) => {
+const detailByPartCodeAndContentNum = async (
+  URL,
+  partCode,
+  contentNum,
+  cnt,
+) => {
   const option = makeOptions("POST", JSON.stringify({ partCode, contentNum }));
-  const URL = "/detail";
 
-  fetch(URL, option)
+  await fetch(URL, option)
     .then((response) => response.json())
     .then((data) => {
       const { address } = data[0].resultList; // 주소
@@ -39,18 +43,18 @@ const detailByPartCodeAndContentNum = async (partCode, contentNum, cnt) => {
  * @param {String} partCode 분야코드
  */
 // eslint-disable-next-line import/prefer-default-export
-export const listByPartCode = async (partCode) => {
+export const listByPartCode = async (URL, partCode) => {
   const option = makeOptions("POST", JSON.stringify({ partCode }));
-  const URL = "/list";
   const resArr = []; // contentSeq를 저장하는 배열
   let cnt = 1;
 
-  fetch(URL, option)
+  await fetch(URL, option)
     .then((response) => response.json())
     .then((data) => {
       for (let i = 0; i < 5; i++) {
         resArr[i] = data[0].resultList[i].contentSeq; // contentSeq를 저장
-        detailByPartCodeAndContentNum(partCode, resArr[i], cnt++); // 반복문안에서 각 시설별 detail 조회
+        detailByPartCodeAndContentNum("/detail", partCode, resArr[i], cnt++); // 반복문안에서 각 시설별 detail 조회
       }
     });
+  return resArr;
 };
