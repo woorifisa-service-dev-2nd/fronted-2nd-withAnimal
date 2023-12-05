@@ -1,22 +1,12 @@
-/* 화살표 함수 */
-const label = document.querySelector('.label');
-const options = document.querySelectorAll('.optionItem');
+import {listByPartCode} from "./api.js";
 
-// 클릭한 옵션의 텍스트를 라벨 안에 넣음
-const handleSelect = (item) => {
-  label.parentNode.classList.remove('active');
-  label.innerHTML = item.textContent;
-}
-// 옵션 클릭시 클릭한 옵션을 넘김
-options.forEach(option => {
-	option.addEventListener('click', () => handleSelect(option))
-})
+const selectbox = document.getElementById("search");
+// let cnt = 1; // table의 한 행을 가져오기 위한 변수
 
-// 라벨을 클릭시 옵션 목록이 열림/닫힘
-label.addEventListener('click', () => {
-  if(label.parentNode.classList.contains('active')) {
-  	label.parentNode.classList.remove('active');
-  } else {
-  	label.parentNode.classList.add('active');
-  }
-})
+/**
+ * selectbox의 eventListener
+ */
+selectbox.addEventListener("change", async (event) => {
+  const partCode = event.target.value;
+  await listByPartCode(partCode);
+});

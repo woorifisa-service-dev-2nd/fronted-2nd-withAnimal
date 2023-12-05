@@ -1,131 +1,61 @@
-/* body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-}
-
-.header-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 20px;
-}
-
-.header-logo img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.header-logo div {
-    font-family: 'Poppins', sans-serif;
-    font-size: 28px;
-    color: #3498db;
-}
-
-/* #withanimal-logo {
-    width: 100px;
+#header {
+    position: relative;
+    background-color: tan;
+    width: 100%;
     height: 100px;
-    background-color: #f0f0f0;
-    border-radius: 50%;
-} */
-
-#selectbox-container {
-    margin-top: 40px;
-    text-align: center; /* 가운데 정렬을 위한 추가 */
-
+    /*logo의 수직정렬을 위한 조건*/
+    line-height: 100px;
+    display: flex;
+    justify-content: center;
 }
 
-#animal-selector {
-    /* 추가적인 스타일 조정이 필요한 경우 여기에 추가하세요. */
+#logo {
+    margin: 20px;
+    text-align: center;
+    vertical-align:text-bottom;
+    font-family: 'Jua';
+    font-size: 50px;
 }
 
-.content {
-    /* 나머지 스타일 코드... */
+#table {
+    /* display: flex; */
+    /* justify-content: center; */
+    margin: auto;
+    margin-bottom: 100px;
+    border: black;
+    border: solid;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: solid;
+    border: black;
+    padding: 10px;
+}
+
+th {
+    background-color: gainsboro;
+}
+
+select {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    /* 텍스트 가운데 정렬 */
+    text-align-last: center;
+    text-align: center;
+}
+
+#search {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
 }
 
 footer {
-    /* footer 스타일 코드... */
-} */
-
-
-/* 여기서부터 custom select box */
-.selectBox2 * { box-sizing: border-box; }
-.selectBox2 {
-  position: relative;
-  width: 150px;
-  height: 35px;
-  border-radius: 4px;
-  border: 2px solid lightcoral;
-  background: url('https://freepikpsd.com/media/2019/10/down-arrow-icon-png-7-Transparent-Images.png') calc(100% - 7px) center no-repeat;
-  background-size: 20px;
-  cursor: pointer;
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    background-color :wheat
 }
-
-.selectBox2:after {
-  content: '';
-  display: block; 
-  width: 2px;
-  height: 100%; 
-  position: absolute; 
-  top: 0; 
-  right: 35px;
-  background: lightcoral;
-}
-
-.selectBox2 .label {
-  display: flex;
-  align-items: center;
-  width: inherit;
-  height: inherit;
-  border: 0 none;
-  outline: 0 none;
-  padding-left: 15px;
-  background: transparent;
-  cursor: pointer;
-}
-
-.selectBox2 .optionList {
-  position: absolute; 
-  top: 28px;
-  left: 0;
-  width: 100%;
-  background: lightcoral;
-  color: #fff;
-  list-style-type: none;
-  padding: 0;
-  border-radius: 6px;
-  overflow: hidden;
-  max-height: 0;
-  transition: .3s ease-in;
-}
-
-.selectBox2.active .optionList {
-  max-height: 500px;
-}
-
-.selectBox2 .optionItem {
-  border-bottom: 1px dashed rgb(170, 72, 72);
-  padding: 5px 15px 5px;
-  transition: .1s;
-}
-
-.selectBox2 .optionItem:hover {
-  background: rgb(175, 93, 93);
-}
-
-.selectBox2 .optionItem:last-child {
-  border-bottom: 0 none;
-}
-
-.selectBox2 .optionList::-webkit-scrollbar {width: 6px;}
-.selectBox2 .optionList::-webkit-scrollbar-track {background: transparent; }
-.selectBox2 .optionList::-webkit-scrollbar-thumb {background: #303030; border-radius: 45px;}
-.selectBox2 .optionList::-webkit-scrollbar-thumb:hover {background: #303030;}
-
