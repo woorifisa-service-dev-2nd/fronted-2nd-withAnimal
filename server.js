@@ -46,7 +46,7 @@ app.post("/detail", (req, res) => {
   const { contentNum } = req.body;
   const URL = `http://www.pettravel.kr/api/detailSeqPart.do?partCode=${partCode}&contentNum=${contentNum}`;
   const request = require("request");
-  console.log(`contentNum: ${contentNum}`);
+
   request.get(URL, (error, response) => {
     res.send(response.body);
   });
